@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connexion à votre espace personnel HANDICAMPUS">
+    <title>Connexion - HANDICAMPUS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-mark" aria-hidden="true">
+                    <img src="../assets/images/logo-symbol.svg" alt="">
+                </div>
+                <div>
+                    <h1><a href="../index.html">HANDICAMPUS</a></h1>
+                    <p class="tagline">Inclusion & Accessibilité Universitaire</p>
+                </div>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="education.html">Éducation</a></li>
+                    <li><a href="accompagnement.html">Accompagnement</a></li>
+                    <li><a href="engagement.html">Engagement</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="connexion.html" class="active btn-connexion" aria-current="page">Connexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h2>Connexion à votre espace</h2>
+                        <p>Accédez à votre tableau de bord personnel</p>
+                    </div>
+
+                    <form id="loginForm" class="login-form" novalidate>
+                        <div class="form-group">
+                            <label for="login-email">Adresse email</label>
+                            <input 
+                                type="email" 
+                                id="login-email" 
+                                name="email" 
+                                required 
+                                aria-required="true"
+                                placeholder="votre.email@exemple.fr"
+                                autocomplete="email"
+                            >
+                            <span class="error-message" id="login-email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-password">Mot de passe</label>
+                            <div class="password-input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="login-password" 
+                                    name="password" 
+                                    required 
+                                    aria-required="true"
+                                    placeholder="••••••••"
+                                    autocomplete="current-password"
+                                >
+                                <button 
+                                    type="button" 
+                                    class="password-toggle" 
+                                    aria-label="Afficher le mot de passe"
+                                    id="togglePassword"
+                                >
+                                    👁️
+                                </button>
+                            </div>
+                            <span class="error-message" id="login-password-error"></span>
+                        </div>
+
+                        <div class="form-options">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember">Se souvenir de moi</label>
+                            </div>
+                            <a href="#" class="forgot-password-link">Mot de passe oublié ?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Se connecter</button>
+
+                        <div class="login-info">
+                            <p class="demo-info">
+                                <strong>Mode démonstration :</strong><br>
+                                Email : <code>demo@handicampus.fr</code><br>
+                                Mot de passe : <code>demo123</code>
+                            </p>
+                        </div>
+                    </form>
+
+                    <div class="login-footer">
+                        <p>Vous n'avez pas encore de compte ?</p>
+                        <a href="#" class="btn btn-secondary">Créer un compte</a>
+                    </div>
+
+                    <div class="login-help">
+                        <h3>Besoin d'aide ?</h3>
+                        <ul>
+                            <li><a href="contact.html">Contactez notre support</a></li>
+                            <li><a href="#" class="modal-trigger" data-modal="help-modal">Comment créer un compte ?</a></li>
+                            <li><a href="#" class="modal-trigger" data-modal="security-modal">Sécurité de votre compte</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="login-benefits">
+                        <h3>Avantages de votre espace personnel</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <span class="benefit-icon">📄</span>
+                                <div>
+                                    <strong>Vos documents</strong>
+                                    <p>Accédez à tous vos documents administratifs en un clic</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">📅</span>
+                                <div>
+                                    <strong>Rendez-vous</strong>
+                                    <p>Gérez vos rendez-vous avec vos accompagnateurs</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">💬</span>
+                                <div>
+                                    <strong>Messagerie</strong>
+                                    <p>Échangez directement avec l'équipe HANDICAMPUS</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon">📊</span>
+                                <div>
+                                    <strong>Suivi personnalisé</strong>
+                                    <p>Consultez l'avancement de vos demandes et démarches</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HANDICAMPUS</h3>
+                    <p>Plateforme d'inclusion et d'accessibilité universitaire pour tous les étudiants.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="education.html">Éducation</a></li>
+                        <li><a href="accompagnement.html">Accompagnement</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: contact@handicampus.fr</li>
+                        <li>Tél: +33 1 23 45 67 89</li>
+                        <li><a href="contact.html">Formulaire de contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HANDICAMPUS. Tous droits réservés. | Plateforme d'inclusion universitaire</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

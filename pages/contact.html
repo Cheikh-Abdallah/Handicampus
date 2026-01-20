@@ -1,0 +1,249 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contactez l'équipe HANDICAMPUS pour toute question ou demande d'accompagnement">
+        <title>Contact - HANDICAMPUS</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-mark" aria-hidden="true">
+                        <img src="../assets/images/logo-symbol.svg" alt="">
+                    </div>
+                    <div>
+                        <h1><a href="../index.html">HANDICAMPUS</a></h1>
+                        <p class="tagline">Inclusion & Accessibilité Universitaire</p>
+                    </div>
+                </div>
+                <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="education.html">Éducation</a></li>
+                        <li><a href="accompagnement.html">Accompagnement</a></li>
+                        <li><a href="engagement.html">Engagement</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                        <li><a href="connexion.html" class="btn-connexion">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-header">
+                <div class="container">
+                    <h2>Nous Contacter</h2>
+                    <p>Une question, un besoin d'accompagnement, un projet ? Écrivez-nous.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="container">
+                    <div class="contact-layout">
+                        <div class="contact-info">
+                            <div class="contact-grid">
+                                <article class="contact-card">
+                                    <div class="contact-icon phone-icon" aria-hidden="true"></div>
+                                    <h3>Par téléphone</h3>
+                                    <p>Notre équipe est joignable pour répondre à vos questions.</p>
+                                    <p><strong>+33 1 23 45 67 89</strong></p>
+                                    <p>Du lundi au vendredi, de 9h à 17h.</p>
+                                </article>
+
+                                <article class="contact-card">
+                                    <div class="contact-icon email-icon" aria-hidden="true"></div>
+                                    <h3>Par email</h3>
+                                    <p>Pour toute question ou envoi de documents, contactez-nous par email.</p>
+                                    <p><strong>contact@handicampus.fr</strong></p>
+                                    <p>Réponse garantie sous 48h ouvrées.</p>
+                                </article>
+
+                                <article class="contact-card">
+                                    <div class="contact-icon location-icon" aria-hidden="true"></div>
+                                    <h3>Sur place</h3>
+                                    <p>Retrouvez-nous au sein de votre université.</p>
+                                    <p><strong>Espace Handicap & Inclusion</strong></p>
+                                    <p>Campus Universitaire - Bâtiment B, RDC</p>
+                                </article>
+
+                                <article class="contact-card">
+                                    <div class="contact-icon schedule-icon" aria-hidden="true"></div>
+                                    <h3>Horaires d'ouverture</h3>
+                                    <ul>
+                                        <li>Lundi, mardi, jeudi : 9h - 12h / 13h - 17h</li>
+                                        <li>Mercredi : 9h - 12h</li>
+                                        <li>Vendredi : 9h - 16h</li>
+                                    </ul>
+                                </article>
+                            </div>
+
+                            <div class="contact-extra">
+                                <h3>Prendre rendez-vous</h3>
+                                <p>
+                                    Vous pouvez solliciter un rendez-vous individuel (présentiel ou en visio) avec un membre de 
+                                    l'équipe HANDICAMPUS pour faire le point sur votre situation, vos besoins et vos projets.
+                                </p>
+                                <p>
+                                    Pour cela, utilisez le formulaire ci-contre en précisant vos disponibilités et le motif de votre demande.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-wrapper">
+                            <h3>Formulaire de contact</h3>
+                            <p>Les champs marqués d'un astérisque (*) sont obligatoires.</p>
+
+                            <form id="contactForm" novalidate>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contactName">Nom et prénom *</label>
+                                        <input type="text" id="contactName" name="name" aria-required="true" required>
+                                        <span class="error-message" aria-live="polite"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contactEmail">Adresse email *</label>
+                                        <input type="email" id="contactEmail" name="email" aria-required="true" required>
+                                        <span class="error-message" aria-live="polite"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contactStatus">Votre statut *</label>
+                                        <select id="contactStatus" name="status" aria-required="true" required>
+                                            <option value="">Sélectionnez une option</option>
+                                            <option value="etudiant">Étudiant</option>
+                                            <option value="lyceen">Lycéen / futur étudiant</option>
+                                            <option value="parent">Parent / famille</option>
+                                            <option value="professionnel">Professionnel de l'enseignement</option>
+                                            <option value="autre">Autre</option>
+                                        </select>
+                                        <span class="error-message" aria-live="polite"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contactSubject">Objet de la demande *</label>
+                                        <select id="contactSubject" name="subject" aria-required="true" required>
+                                            <option value="">Sélectionnez un objet</option>
+                                            <option value="amenagements">Aménagements d'études ou d'examens</option>
+                                            <option value="aides">Aides financières et bourses</option>
+                                            <option value="orientation">Orientation / réorientation</option>
+                                            <option value="accompagnement">Accompagnement psychologique ou social</option>
+                                            <option value="projet">Projet ou partenariat</option>
+                                            <option value="autre">Autre demande</option>
+                                        </select>
+                                        <span class="error-message" aria-live="polite"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contactMessage">Votre message *</label>
+                                    <textarea id="contactMessage" name="message" rows="5" aria-required="true" required></textarea>
+                                    <span class="error-message" aria-live="polite"></span>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contactAvailability">Vos disponibilités (facultatif)</label>
+                                        <input type="text" id="contactAvailability" name="availability" placeholder="Ex : Lundi et mardi après-midi">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contactPhone">Téléphone (facultatif)</label>
+                                        <input type="tel" id="contactPhone" name="phone" placeholder="Pour vous rappeler si nécessaire">
+                                    </div>
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="consent" aria-required="true" required>
+                                        J'accepte que mes données soient utilisées uniquement dans le cadre du traitement de ma demande.
+                                    </label>
+                                    <span class="error-message" aria-live="polite"></span>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+                                <p class="form-hint">Vous recevrez une copie de votre message par email.</p>
+
+                                <div id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
+                                    <strong>Merci !</strong> Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="faq-section">
+                        <h3>Questions fréquentes</h3>
+                        <details class="faq-item">
+                            <summary>Je ne sais pas si je dois déclarer mon handicap, que faire ?</summary>
+                            <p>
+                                Déclarer votre handicap permet de mettre en place des aménagements adaptés et de sécuriser 
+                                votre parcours d'études. Cette information reste confidentielle et n'est partagée qu'avec les 
+                                professionnels concernés. N'hésitez pas à nous contacter pour en parler en toute confiance.
+                            </p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Je suis parent d'un futur étudiant, puis-je vous contacter ?</summary>
+                            <p>
+                                Oui, bien sûr. Nous pouvons vous informer sur les dispositifs existants, les démarches à prévoir 
+                                et les aménagements possibles. Nous pourrons également vous orienter vers le service handicap 
+                                de l'établissement visé.
+                            </p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Je souhaite proposer un partenariat ou un projet avec HANDICAMPUS.</summary>
+                            <p>
+                                Nous sommes ouverts aux collaborations avec les associations, établissements et entreprises 
+                                engagés en faveur de l'inclusion. Utilisez le formulaire en sélectionnant « Projet ou partenariat » 
+                                comme objet de demande.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>HANDICAMPUS</h3>
+                        <p>Plateforme d'inclusion et d'accessibilité universitaire pour tous les étudiants.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="../index.html">Accueil</a></li>
+                            <li><a href="education.html">Éducation</a></li>
+                            <li><a href="accompagnement.html">Accompagnement</a></li>
+                            <li><a href="ressources.html">Ressources</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li>Email: contact@handicampus.fr</li>
+                            <li>Tél: +33 1 23 45 67 89</li>
+                            <li><a href="contact.html">Formulaire de contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 HANDICAMPUS. Tous droits réservés. | Plateforme d'inclusion universitaire</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+    </html>

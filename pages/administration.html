@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tableau de bord administrateur HANDICAMPUS">
+    <title>Administration - HANDICAMPUS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-page">
+    <header class="main-header admin-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-mark" aria-hidden="true">
+                    <img src="../assets/images/logo-symbol.svg" alt="">
+                </div>
+                <div>
+                    <h1><a href="../index.html">HANDICAMPUS</a></h1>
+                    <p class="tagline">Administration</p>
+                </div>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Retour au site</a></li>
+                    <li><a href="#" id="logoutBtn" class="btn-logout">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="container">
+            <!-- Message de bienvenue -->
+            <div class="admin-welcome">
+                <h2>Tableau de Bord Administrateur</h2>
+                <p>Bienvenue, <strong id="adminName">Administrateur</strong></p>
+            </div>
+
+            <!-- Statistiques rapides -->
+            <section class="admin-stats">
+                <h3 class="section-title">Statistiques</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon users-icon" aria-hidden="true"></div>
+                        <div class="stat-content">
+                            <div class="stat-number">3,247</div>
+                            <div class="stat-label">Utilisateurs inscrits</div>
+                            <div class="stat-trend positive">+12% ce mois</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon messages-icon" aria-hidden="true"></div>
+                        <div class="stat-content">
+                            <div class="stat-number">127</div>
+                            <div class="stat-label">Messages non lus</div>
+                            <div class="stat-trend">24 aujourd'hui</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon content-icon" aria-hidden="true"></div>
+                        <div class="stat-content">
+                            <div class="stat-number">45</div>
+                            <div class="stat-label">Contenus publiés</div>
+                            <div class="stat-trend positive">+3 cette semaine</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon visits-icon" aria-hidden="true"></div>
+                        <div class="stat-content">
+                            <div class="stat-number">15,834</div>
+                            <div class="stat-label">Visites ce mois</div>
+                            <div class="stat-trend positive">+8% vs mois dernier</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation de l'administration -->
+            <section class="admin-sections">
+                <h3 class="section-title">Gestion</h3>
+                
+                <!-- Gestion des utilisateurs -->
+                <div class="admin-section" id="users-section">
+                    <div class="section-header">
+                        <h4>👥 Gestion des Utilisateurs</h4>
+                        <button class="btn btn-small btn-primary" id="addUserBtn">Ajouter un utilisateur</button>
+                    </div>
+                    
+                    <div class="admin-filters">
+                        <input type="search" placeholder="Rechercher un utilisateur..." class="search-input" id="userSearch">
+                        <select class="filter-select" id="userFilter">
+                            <option value="all">Tous les utilisateurs</option>
+                            <option value="etudiant">Étudiants</option>
+                            <option value="accompagnant">Accompagnants</option>
+                            <option value="admin">Administrateurs</option>
+                        </select>
+                    </div>
+
+                    <div class="admin-table-wrapper">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Email</th>
+                                    <th>Statut</th>
+                                    <th>Inscription</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTableBody">
+                                <tr>
+                                    <td>#001</td>
+                                    <td>Martin Dupont</td>
+                                    <td>martin.dupont@email.fr</td>
+                                    <td><span class="badge badge-success">Étudiant</span></td>
+                                    <td>12/01/2026</td>
+                                    <td>
+                                        <button class="action-btn edit-btn" aria-label="Modifier">✏️</button>
+                                        <button class="action-btn delete-btn" aria-label="Supprimer">🗑️</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#002</td>
+                                    <td>Sophie Bernard</td>
+                                    <td>sophie.bernard@email.fr</td>
+                                    <td><span class="badge badge-info">Accompagnant</span></td>
+                                    <td>10/01/2026</td>
+                                    <td>
+                                        <button class="action-btn edit-btn" aria-label="Modifier">✏️</button>
+                                        <button class="action-btn delete-btn" aria-label="Supprimer">🗑️</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#003</td>
+                                    <td>Lucas Moreau</td>
+                                    <td>lucas.moreau@email.fr</td>
+                                    <td><span class="badge badge-success">Étudiant</span></td>
+                                    <td>08/01/2026</td>
+                                    <td>
+                                        <button class="action-btn edit-btn" aria-label="Modifier">✏️</button>
+                                        <button class="action-btn delete-btn" aria-label="Supprimer">🗑️</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#004</td>
+                                    <td>Emma Laurent</td>
+                                    <td>emma.laurent@email.fr</td>
+                                    <td><span class="badge badge-warning">Admin</span></td>
+                                    <td>05/01/2026</td>
+                                    <td>
+                                        <button class="action-btn edit-btn" aria-label="Modifier">✏️</button>
+                                        <button class="action-btn delete-btn" aria-label="Supprimer">🗑️</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Gestion des contenus -->
+                <div class="admin-section" id="content-section">
+                    <div class="section-header">
+                        <h4>📝 Gestion des Contenus</h4>
+                        <button class="btn btn-small btn-primary" id="addContentBtn">Ajouter un contenu</button>
+                    </div>
+
+                    <div class="content-grid">
+                        <article class="content-card">
+                            <div class="content-type">Actualité</div>
+                            <h5>Nouveau dispositif d'accompagnement</h5>
+                            <p class="content-date">Publié le 15/01/2026</p>
+                            <div class="content-actions">
+                                <button class="btn btn-small btn-secondary">Modifier</button>
+                                <button class="btn btn-small btn-danger">Supprimer</button>
+                            </div>
+                        </article>
+
+                        <article class="content-card">
+                            <div class="content-type">Ressource</div>
+                            <h5>Guide des aménagements 2026</h5>
+                            <p class="content-date">Publié le 10/01/2026</p>
+                            <div class="content-actions">
+                                <button class="btn btn-small btn-secondary">Modifier</button>
+                                <button class="btn btn-small btn-danger">Supprimer</button>
+                            </div>
+                        </article>
+
+                        <article class="content-card">
+                            <div class="content-type">Événement</div>
+                            <h5>Forum de l'inclusion - 5 février</h5>
+                            <p class="content-date">Publié le 08/01/2026</p>
+                            <div class="content-actions">
+                                <button class="btn btn-small btn-secondary">Modifier</button>
+                                <button class="btn btn-small btn-danger">Supprimer</button>
+                            </div>
+                        </article>
+
+                        <article class="content-card">
+                            <div class="content-type">Page</div>
+                            <h5>Mise à jour page Éducation</h5>
+                            <p class="content-date">Modifié le 05/01/2026</p>
+                            <div class="content-actions">
+                                <button class="btn btn-small btn-secondary">Modifier</button>
+                                <button class="btn btn-small btn-danger">Supprimer</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Messages reçus -->
+                <div class="admin-section" id="messages-section">
+                    <div class="section-header">
+                        <h4>💬 Messages Reçus</h4>
+                        <select class="filter-select" id="messageFilter">
+                            <option value="unread">Non lus (127)</option>
+                            <option value="all">Tous les messages</option>
+                            <option value="archived">Archivés</option>
+                        </select>
+                    </div>
+
+                    <div class="messages-list">
+                        <article class="message-item unread">
+                            <div class="message-header">
+                                <div class="message-sender">
+                                    <strong>Pierre Dubois</strong>
+                                    <span class="message-email">pierre.dubois@email.fr</span>
+                                </div>
+                                <time class="message-date">Il y a 2 heures</time>
+                            </div>
+                            <div class="message-subject">Demande d'accompagnement pour la rentrée 2026</div>
+                            <p class="message-preview">
+                                Bonjour, je suis étudiant en situation de handicap et je souhaiterais bénéficier 
+                                d'un accompagnement pour ma première année à l'université...
+                            </p>
+                            <div class="message-actions">
+                                <button class="btn btn-small btn-primary">Répondre</button>
+                                <button class="btn btn-small btn-secondary">Archiver</button>
+                                <button class="btn btn-small btn-danger">Supprimer</button>
+                            </div>
+                        </article>
+
+                        <article class="message-item unread">
+                            <div class="message-header">
+                                <div class="message-sender">
+                                    <strong>Marie Leroy</strong>
+                                    <span class="message-email">marie.leroy@email.fr</span>
+                                </div>
+                                <time class="message-date">Il y a 5 heures</time>
+                            </div>
+                            <div class="message-subject">Question sur les aménagements d'examens</div>
+                            <p class="message-preview">
+                                Je voudrais savoir quels documents je dois fournir pour obtenir des aménagements 
+                                lors de mes examens...
+                            </p>
+                            <div class="message-actions">
+                                <button class="btn btn-small btn-primary">Répondre</button>
+                                <button class="btn btn-small btn-secondary">Archiver</button>
+                                <button class="btn btn-small btn-danger">Supprimer</button>
+                            </div>
+                        </article>
+
+                        <article class="message-item">
+                            <div class="message-header">
+                                <div class="message-sender">
+                                    <strong>Université Lyon 2</strong>
+                                    <span class="message-email">partenariat@univ-lyon2.fr</span>
+                                </div>
+                                <time class="message-date">Hier, 14:30</time>
+                            </div>
+                            <div class="message-subject">Proposition de partenariat</div>
+                            <p class="message-preview">
+                                Nous souhaiterions établir un partenariat avec HANDICAMPUS pour améliorer 
+                                l'accueil des étudiants en situation de handicap...
+                            </p>
+                            <div class="message-actions">
+                                <button class="btn btn-small btn-primary">Répondre</button>
+                                <button class="btn btn-small btn-secondary">Archiver</button>
+                                <button class="btn btn-small btn-danger">Supprimer</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="btn btn-small" disabled>Précédent</button>
+                        <span class="pagination-info">Page 1 sur 13</span>
+                        <button class="btn btn-small">Suivant</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 HANDICAMPUS - Administration | Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
