@@ -130,62 +130,82 @@
         </section>
 
         <!-- Section témoignage vidéo -->
-        <section class="testimonials-section" aria-labelledby="temoignage-titre">
-            <div class="container">
-                <div class="testimonials-header">
-                    <h2 id="temoignage-titre">Témoignage d'étudiant</h2>
-                    <p>Découvrez le parcours inspirant d'un étudiant accompagné par HANDICAMPUS.</p>
-                </div>
-                <div class="testimonials-layout">
-                    <article class="testimonial-highlight">
-                        <p class="testimonial-quote">
-                            "Sans l'accompagnement de HANDICAMPUS, je n'aurais jamais imaginé poursuivre mes études à
-                            l'université. Les aménagements mis en place m'ont permis de me concentrer sur l'essentiel :
-                            apprendre et m'épanouir."
-                        </p>
-                        <p class="testimonial-author">— Lina, étudiante en licence de droit</p>
-                        <button
-                            type="button"
-                            class="btn btn-primary"
-                            id="openVideoBtn"
-                            data-video-id="1170132079"
-                            data-video-start="21"
-                        >
-                            Voir le témoignage en vidéo
-                        </button>
-                    </article>
-                    <div class="testimonial-visual" aria-hidden="true">
-                        <div class="video-thumb">
-                            <div class="video-play-icon">▶</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<section class="testimonials-section" aria-labelledby="temoignage-titre">
+    <div class="container">
+        <div class="testimonials-header">
+            <h2 id="temoignage-titre">Témoignage d'étudiant</h2>
+            <p>Découvrez le parcours inspirant d'un étudiant accompagné par HANDICAMPUS.</p>
+        </div>
 
-    <!-- Modal vidéo témoignage -->
-    <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
-        <div class="modal-backdrop" data-modal-close></div>
-        <div class="modal-dialog" role="document">
-            <button type="button" class="modal-close" id="closeVideoBtn" aria-label="Fermer la vidéo">
-                ×
-            </button>
-            <h2 id="videoModalTitle">Témoignage vidéo d'étudiant</h2>
-            <div class="modal-body">
-                <div class="video-wrapper">
-                    <iframe
-                            id="videoFrame"
-                            src="https://player.vimeo.com/video/1170132079"
-                            title="Témoignage vidéo Vimeo"
-                            frameborder="0"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+        <div class="testimonials-layout">
+
+            <article class="testimonial-highlight">
+                <p class="testimonial-quote">
+                    "Sans l'accompagnement de HANDICAMPUS, je n'aurais jamais imaginé poursuivre mes études à
+                    l'université. Les aménagements mis en place m'ont permis de me concentrer sur l'essentiel :
+                    apprendre et m'épanouir."
+                </p>
+
+                <p class="testimonial-author">
+                    — Lina, étudiante en licence de droit
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="openVideoBtn"
+                    data-video-id="1170132079"
+                >
+                    Voir le témoignage en vidéo
+                </button>
+            </article>
+
+            <div class="testimonial-visual" aria-hidden="true">
+                <div class="video-thumb">
+                    <div class="video-play-icon">▶</div>
                 </div>
             </div>
+
         </div>
     </div>
+</section>
+
+
+<!-- Modal vidéo témoignage -->
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
+
+    <div class="modal-backdrop" data-modal-close></div>
+
+    <div class="modal-dialog" role="document">
+
+        <button type="button" class="modal-close" id="closeVideoBtn" aria-label="Fermer la vidéo">
+            ×
+        </button>
+
+        <h2 id="videoModalTitle">
+            Témoignage vidéo d'étudiant
+        </h2>
+
+        <div class="modal-body">
+
+            <div class="video-wrapper">
+
+                <iframe
+                    id="videoFrame"
+                    src=""
+                    title="Témoignage vidéo Vimeo"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
     <!-- Pied de page -->
     <footer class="main-footer">
@@ -222,5 +242,6 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
