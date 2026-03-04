@@ -204,3 +204,27 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
 });
+
+
+const openBtn = document.getElementById("openVideoBtn");
+const modal = document.getElementById("videoModal");
+const closeBtn = document.getElementById("closeVideoBtn");
+const videoFrame = document.getElementById("videoFrame");
+
+openBtn.addEventListener("click", function () {
+
+    const videoId = this.dataset.videoId;
+
+    videoFrame.src = "https://player.vimeo.com/video/" + videoId + "?autoplay=1";
+
+    modal.removeAttribute("hidden");
+
+});
+
+closeBtn.addEventListener("click", function () {
+
+    modal.setAttribute("hidden", true);
+
+    videoFrame.src = "";
+
+});
